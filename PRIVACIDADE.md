@@ -7,9 +7,16 @@ Aplicativo OAuth 2.0 de uso pessoal e privado do titular da conta Google que o a
 Não é distribuído, não é oferecido ao público e não coleta dados de usuários.
 
 ## Que dados acessa
-Somente a agenda Google da conta que autoriza o acesso, pelo escopo
-`https://www.googleapis.com/auth/calendar`, e somente depois de autorização explícita
-na tela de consentimento do Google. Nenhum outro dado é acessado.
+Somente dados da conta Google que autoriza o acesso, e somente depois de autorização
+explícita na tela de consentimento:
+
+- **Google Agenda** — escopo `https://www.googleapis.com/auth/calendar`: ler e criar
+  eventos na agenda do próprio titular.
+- **Gmail** — escopo `https://www.googleapis.com/auth/gmail.compose`: criar e ler
+  rascunhos de e-mail. O aplicativo **não envia e-mail**: não existe função de envio
+  no código; o envio é sempre ação manual do titular, dentro do Gmail.
+
+Nenhum outro dado é acessado.
 
 ## Onde os dados ficam
 Os tokens de autorização são gravados apenas no computador do titular, em pasta local
